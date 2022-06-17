@@ -60,8 +60,14 @@
             event.stopPropagation();
         };
 
-        childd.addEventListener("click", callChild());
-        parentt.addEventListener("click", callParent());
+        // this is the by defaut behaviour of event propagation i.e event bubblng.
+        // it will go from innermost element to outer most element(buttom to top).
+        // if we did not write false in the event listener() then also it is fine.
+        childd.addEventListener("click", callChild(),false);
+        parentt.addEventListener("click", callParent(),false);
+
+        
+
     </script>
 </body>
 
